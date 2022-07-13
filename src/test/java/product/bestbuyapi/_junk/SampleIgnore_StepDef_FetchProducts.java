@@ -56,6 +56,7 @@ public class SampleIgnore_StepDef_FetchProducts {
 			
 		}catch(Exception e) {
 			e.printStackTrace();
+			System.out.println("Verifying the pull");
 		}
 
 	}
