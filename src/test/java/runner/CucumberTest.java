@@ -14,22 +14,14 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-	
-		features = {"classpath:features/bestbuyapi"},
-		glue = "product.bestbuyapi",
-		plugin =
-			{
-					"pretty" , 
-					"json:target/cucumber.json",
-					"html:target/cucumber",
-					"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-			},
-		dryRun=false
-		
-		)
+
+		features = {
+				"/src/test/resources/features/APIHealthCheck.feature" },
+		glue = "product.bestbuyapi.stepdefs",
+		plugin = {"com.avenstack.extentreports.cucumber.adapters.ExtentCucumberAdapter:" }, 
+		dryRun = false
+
+)
 public class CucumberTest {
-
-
-
 
 }

@@ -4,7 +4,7 @@ Feature: Best Buy API Get Product Info
 	@get
 	Scenario: Get All product
     Given Best Buy API is up and running
-    When I hit url with query parameter as "all"
+   # When I hit url with query parameter as "all"
     Then API returns the response with status code as 200
     And all the products will be returned
 

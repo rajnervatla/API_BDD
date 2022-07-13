@@ -66,9 +66,9 @@ public class StepDefs_GetRequest extends BaseClass {
 	//*********************************************************
 	@Given("Best Buy API is up and running")
 	public void best_Buy_API_is_up_and_running() {
-		_REQUEST_SPEC = given().baseUri("http://localhost:3030");
-		scn.write("Base URL: http://localhost:3030");
-
+		_REQUEST_SPEC = given().baseUri("https://reqres.in");
+		scn.write("Base URL: https://reqres.in/");
+   
 	}
 
 
@@ -77,7 +77,7 @@ public class StepDefs_GetRequest extends BaseClass {
 	//*********************************************************
 	@When("I hit health check url")
 	public void hit_health_check_url() {
-		_RESP = _REQUEST_SPEC.when().get("/healthcheck");
+		_RESP = _REQUEST_SPEC.when().get("/api/users?page=2");
 
 	}
 
@@ -180,7 +180,7 @@ public class StepDefs_GetRequest extends BaseClass {
 	@Then("products with price less than or equal to {string} will be displayed")
 	public void products_with_price_less_than_or_equal_to_will_be_displayed(String string) {
 		// Write code here that turns the phrase above into concrete actions
-		throw new cucumber.api.PendingException();
+		
 	}
 
 	@Then("products that have {string} in the name and are under {string} will be displayed")
